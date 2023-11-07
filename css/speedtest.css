@@ -1,0 +1,444 @@
+	.speedtest{
+		text-align: center;
+		margin-top: 200px;
+		font-family: "Roboto", sans-serif;
+	}
+	
+	.speedtest h1{
+		color:#404040;
+	}
+	
+	.speedtest li::marker {
+		color: #798bff;
+		list-style: decimal;
+		list-style-type: disc;
+	}
+	
+	#startStopBtn{
+		display:inline-block;
+		margin:0 auto;
+		color:#6060AA;
+		background-color:rgba(0,0,0,0);
+		border:0.15em solid #6060FF;
+		border-radius:0.3em;
+		transition:all 0.3s;
+		box-sizing:border-box;
+		width:8em; height:3em;
+		line-height:2.7em;
+		cursor:pointer;
+		box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
+	}
+	
+	#startStopBtn:hover{
+		box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
+	}
+	
+	#startStopBtn.running{
+		background-color:#FF3030;
+		border-color:#FF6060;
+		color:#FFFFFF;
+	}
+	
+	#startStopBtn:before{
+		content:"开始测速";
+	}
+	
+	#startStopBtn.running:before{
+		content:"终止测速";
+	}
+	
+	#test{
+		margin-top:2em;
+		margin-bottom:2em;
+	}
+	
+	#switch {
+		display: flex;
+		font-size: 12px;
+		margin: 0px auto 5em auto;
+		width: 160px;
+		border-radius: 1em;
+	}
+
+	#ipv4 {
+		padding: 5px 5px;
+		background-color: #dfdfdf;
+		color: white;
+		border-radius: 1em 0px 0px 1em;
+		width: 50%;
+		transition: all 0.3s;
+	}
+
+	#ipv6 {
+		padding: 5px 5px;
+		background-color: #dfdfdf;
+		color: white;
+		border-radius: 0px 1em 1em 0px;
+		width: 50%;
+		transition: all 0.3s;
+	}
+
+	#ipv4 a,
+	#ipv6 a {
+		text-decoration: none;
+		color: white;
+	}
+
+	.selected-tab-v4 {
+		background-color: #798bff !important;
+		transition: all 0.3s;
+	}
+
+	#switch div:not(.selected-tab):hover {
+		background-color: #c7a7c6;
+		transition: all 0.3s;
+	
+	}
+	.selected-tab-v6 {
+		background-color: #ff6666 !important;
+		transition: all 0.3s;
+	}
+
+	#switch div:not(.selected-tab):hover {
+		background-color: #c7a7c6;
+		transition: all 0.3s;
+	
+	}
+	
+	.speedtest div.testArea{
+		display:inline-block;
+		width:14em;
+		height:9em;
+		position:relative;
+		box-sizing:border-box;
+	}
+	
+	.speedtest div.testName{
+		position:absolute;
+		top:0.1em; left:0;
+		width:100%;
+		font-size:1.4em;
+		/* z-index:9; */
+	}
+	
+	.speedtest div.meterText{
+		position:absolute;
+		bottom:1.3em; left:0;
+		width:100%;
+		font-size:2.5em;
+		/* z-index:9; */
+	}
+	
+	#dlText{
+		color:#6060AA;
+	}
+	
+	#ulText{
+		color:#309030;
+	}
+	
+	#pingText,#jitText{
+		color:#AA6060;
+	}
+	
+	.speedtest div.meterText:empty:before{
+		color:#505050 !important;
+		content:"0.00";
+	}
+	
+	.speedtest div.unit{
+		position:absolute;
+		bottom:2em; left:0;
+		width:100%;
+		/* z-index:9; */
+	}
+	
+	.speedtest div.testGroup{
+		display:inline-block;
+	}
+	
+	@media all and (max-width:65em){
+		.speedtest{
+			font-size:1.5vw;
+		}
+	}
+	
+	@media all and (max-width:40em){
+		.speedtest{
+			font-size:0.8em;
+		}
+		.speedtest div.testGroup{
+			display:block;
+			margin: 0 auto;
+		}
+	}
+	
+	#progressBar{
+		width:90%;
+		height:0.3em;
+		background-color:#EEEEEE;
+		position:relative;
+		display:block;
+		margin:0 auto;
+		margin-bottom:2em;
+	}
+	
+	#progress{
+		position:absolute;
+		top:0; left:0;
+		height:100%;
+		width:0%;
+		transition: width 2s;
+		background-color:#90BBFF;
+	}
+	
+	.claim {
+		width: 96%;
+		margin: 60px 2% 0;
+		padding: 16px 0;
+		text-align: center
+	}
+	
+    .claim a {
+		margin: 0 12px;
+		font-family: "Arial",sans-serif;
+		font-size: 13px;
+		font-weight: 400;
+		letter-spacing: 0;
+		line-height: 16px;
+		color: #5c6f84
+    }
+	
+    .claim a:hover {
+		text-decoration: underline
+	}
+	
+	.small-icon {
+		margin: auto 1px;
+		vertical-align: middle;
+	}
+	
+	#adviceArea {
+		/* width: 70%; */
+		max-width: 30em;
+		margin: 0 auto;
+		margin-top: 2em;
+		text-align: left;
+		text-align: justify;
+	}
+	
+	#adviceArea li {
+		list-style: decimal;
+		margin: 1em auto;
+		list-style-type: disc;
+	}
+	
+	#adviceArea ul {
+		list-style: decimal;
+		padding-left: 1em;
+	}
+	
+	#tipsArea {
+		font-size: 12px;
+		color: #808080;
+		max-width: 40em;
+		width: 70%;
+		margin: 0px auto;
+	}
+
+	#tip::before {
+		content: "💡";
+	}
+
+	.speedtest .tooltip {
+		vertical-align: super;
+		display: inline;
+		padding: 0;
+		z-index: 90;
+		position: static;
+		opacity: 1;
+		font-size: initial;
+	}
+
+	.speedtest .tooltip:hover .tooltip-text {
+		visibility: visible;
+	}
+
+	.speedtest .tooltip-text {
+		visibility: hidden;
+		position: absolute;
+		z-index: 99;
+		font-size: 12px;
+		width: 140px;
+		background-color: #666666da;
+		color: white;
+		text-align: left;
+		padding: 5px 10px;
+		border-radius: 5px;
+		margin-top: 28px;
+		margin-left: -63px;
+	}
+
+	.speedtest .tooltip-text::after {
+		content: " ";
+		position: absolute;
+		bottom: 100%;
+		margin-left: 0px;
+		left: calc(50% - 5px);
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent #666666da transparent;
+	}
+
+	.speedtest .tooltip svg {
+		position: absolute;
+		fill: #666666da;
+	}
+
+	.speedtest .tooltip svg:hover {
+		fill: #798bffda;
+	}
+	
+	#guide {
+		font-size: 12px;
+		border-left: 3px solid #798bff;
+		padding: 12px;
+		background-color: #f2f2f2;
+	}
+	
+	.speedtest .h3-title {
+		vertical-align: middle;
+	}
+	
+	.privacy {
+		text-align: center;
+		font-size: 0.8em;
+		color: #808080;
+		padding: 0;
+		text-decoration: underline;
+	}
+	
+	#privacyPolicy {
+		position: fixed;
+		top: 2em;
+		bottom: 2em;
+		left: 2em;
+		right: 2em;
+		overflow-y: auto;
+		width: auto;
+		height: auto;
+		box-shadow: 0 0 20px 1px #8080806b;
+		z-index: 999999;
+		text-align: left;
+		background-color: #FFFFFF;
+		padding: 3em;
+		border-radius: 20px 0 0 20px;
+	}
+	
+	#privacyPolicy h4::before {
+		content: "# ";
+	}
+	
+	#privacyPolicy li {
+		list-style: decimal;
+		list-style-type: disc;
+	}
+	
+	#privacyPolicy ul {
+		list-style: decimal;
+		padding-left: 1em;
+	}
+	
+	#privacyPolicy li::marker {
+		color: #798bff;
+		list-style: decimal;
+		list-style-type: disc;
+	}
+	
+	a.privacy {
+		text-align: center;
+		font-size: 0.8em;
+		color: #808080;
+		padding: 0;
+	}
+	
+	div.closePrivacyPolicy {
+		width: 100%;
+		text-align: center;
+	}
+	
+	div.closePrivacyPolicy a.privacy {
+		padding: 1em 3em;
+	}
+	
+	.text-link {
+		text-decoration-line: none;
+		font-style: normal;
+		font-weight: normal;
+		color: #333333;
+		transition: color 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		margin: 0px 1px;
+	}
+
+	.text-link:hover {
+		text-decoration-line: none;
+		color: #6f106e;
+		transition: color 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	}
+	
+	#slogandiv {
+		margin: 0px auto 5em auto;
+	}
+	
+	.slogan {
+		display: inline-block;
+		line-height: initial;
+		border-radius: 20px;
+		padding: 3px 10px;
+		background: #EEEEEE;
+		font-size: 14px;
+		color: #4F7396;
+		letter-spacing: 0.7px;
+	}
+	
+	.slogan strong {
+		font-weight: bold;
+		color: #00284E;
+	}
+	
+	.slogan .badge {
+		display: inline-block;
+		padding: .35em .65em !important;
+		font-size: .95em;
+		font-weight: 500;
+		line-height: 1;
+		color: #fff;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: 50rem !important;
+		color: #fff !important;
+		background: linear-gradient(90.43deg, #FF8386 10.07%, #FF171D 99.78%);
+	}
+	
+	.small, small {
+		font-size: .875em;
+	}
+	
+	.slogan i {
+		/*font-size: 10px;*/
+		width: 25px;
+		line-height: 20px;
+		background: #738BAE;
+		text-align: center;
+		color: #fff;
+		border-radius: 20px;
+		display: inline-block;
+		margin-left: 0;
+		padding-left: 3px;
+		transition: all 0.3s ease-in-out;
+	}
+	
+	.slogan:hover i {
+	  background: #7f8dff;
+	}

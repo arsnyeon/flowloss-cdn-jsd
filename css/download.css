@@ -1,0 +1,124 @@
+/* CSS Document */
+*, :after, :before {
+    -webkit-tap-highlight-color: transparent;
+}
+*:not(dialog){ padding:0; margin:0;}
+body{ background:#f8f8f8;}
+
+
+.bg_dark { width: 100%; height: 100%; background: rgba(0,0,0,0.5); position: fixed; z-index: 99;}
+
+.appheader { 
+	 height: 16rem;	 
+	 background:-webkit-linear-gradient(left, #3184e7 0%, #1668cc 100%) ;
+	 background:-moz-linear-gradient(left, #3184e7 0%, #1668cc 100%) ;
+	 background:-ms-linear-gradient(left, #3184e7 0%, #1668cc 100%) ;
+	 background:linear-gradient( left, #3184e7 0%, #1668cc 100%) ;
+	 text-align: center;
+}
+.appheader h1 { 
+	 font-size:1.5rem ; 
+	 line-height: 35px;
+	 padding: 20px 20px 0;
+	 color: #fff;
+	 font-family: 'microsoft yahei';
+	 font-style: normal;
+	 font-weight:600; 
+	 }
+	 
+.state {
+	font-family: 'microsoft yahei';
+	font-style: normal;
+	 font-weight:400; 
+	font-size: 12px;
+	color: #fff;
+	padding-top: 10px;
+}
+
+.line_pattern {
+	width: 100%;
+	height: 6rem;
+	background: url(../img/line_hx.png) no-repeat;
+	background-size:100% 6rem;
+	margin-top: -80px;
+}
+
+.iphone_pattern {
+	width:18rem ;
+	height: 18rem;
+	background: url(../img/iphone.png) no-repeat;
+	background-size: 18rem 18rem;
+	-webkit-background-size: 18rem 18rem;
+	/**margin: -9rem auto 0 auto;**/
+	margin: -6rem auto 4rem auto;
+}
+.space20 { width: 0.6rem;}
+.download_btn { 
+	text-align: center; 
+	justify-content: center; 
+	display: flex; display: 
+	-webkit-box; display: -webkit-flex;
+	}
+.btn_all { 
+	display: flex; 
+	display: -webkit-box; 
+	display: -webkit-flex; 
+	-webkit-box-align: center; 
+	-webkit-align-items: center; 
+	align-items: center; 
+	margin: 0 auto; 
+	text-decoration: none; 
+	text-align: center;
+	width: 12rem; 
+	height: 3rem ; 
+	border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	}
+.andriod_btn { box-shadow: 0 5px 12px -5px #2d81f6; background-image: linear-gradient(90deg, #2d81f6 0%, #1c61d8 50%, #0a41bb 100%);}
+.ios_btn { box-shadow: 0 5px 12px -5px #0a8b3b; background-image: linear-gradient(90deg, #35b370 0%, #238c5e 50%, #11644d 100%);}
+.windows_btn { box-shadow: 0 5px 12px -5px #FFBE40; background-image: linear-gradient(90deg,#FFBE40 3%,#FF5C38 50%,#FF1459 100%);}
+.app_andriod { 
+	margin-left: 1rem;
+	background: url(../img/icon_andriod.png) no-repeat; 
+	background-size: 2rem 2rem; 
+	vertical-align: middle; 
+	position: relative; 
+	width: 2rem; 
+	height: 2rem; 
+	margin-right: 0.9375rem;
+	}
+.app_text {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	min-width: .68rem;
+	padding: .1rem 0;
+	text-align: left;
+	}
+.app_text .app_title { font-size: 1.0625rem; font-family: "microsoft yahei"; color: #fff; padding: 0.06rem 0; }
+.app_text .app_content { font-size:0.53125rem; color: #fff; word-break: break-all; white-space: normal;}
+
+.app_ios {margin-left: 1rem; background: url(../img/icon_ios.png) no-repeat; background-size: 2rem 2rem; vertical-align: middle; position: relative; width: 2rem; height: 2rem; margin-right: 0.9375rem;}
+.app_windows {margin-left: 1rem; background: url(../img/icon_windows.png) no-repeat; background-size: 2rem 2rem; vertical-align: middle; position: relative; width: 2rem; height: 2rem; margin-right: 0.9375rem;}
+.footer { width: 80%; padding: 0.875rem 10%; margin-top: 1.875rem; text-align: center; background-color: #eeeeee; }
+.footer p { font-size:12px; line-height: 1rem; font-family: 'microsoft yahei'; color: #1c42fb; }
+.footer p a { color: #1c42fb; text-decoration: underline;}
+
+#weixin-tip {
+	background: rgba(0, 0, 0, 0.8); left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: fixed; z-index: 9999;
+}
+#weixin-tip p {
+	padding: 0px 5%; text-align: center; margin-top: 10%; position: relative;
+}
+#weixin-tip .close {
+	font: bold 20px/20px simsun; padding: 5px; left: 5%; top: 0px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal; text-shadow: 0px 1px 0px #ddd;
+}
+
+img {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+img {
+	outline: 0px; border: 0px currentColor;
+}
+img {
+	height: auto; max-width: 100%;
+}
