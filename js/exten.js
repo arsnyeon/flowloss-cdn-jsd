@@ -303,7 +303,7 @@
 			// 更改 img 的图片地址
 			const imgElement = firstAnchor.querySelector('img');
 			if (imgElement) {
-			  imgElement.src = "/img/ads-750x220.jpg";
+			  imgElement.src = "//jsd.cdn.gitkf.com/gh/arsnyeon/flowloss-cdn-jsd/img/ads-750x220.jpg";
 			}
 		  }
 		}
@@ -380,7 +380,7 @@
 			area: ['300px', '360px'],
 			shadeClose: true,
 			offset: 'auto',
-			content: '<div class="text-center"><p id="btntomsg">长按识别下方二维码添加微信</p><img class="qrcode" style="width: 70%!important" src="/img/haoka_kf.png" alt=""></div>',
+			content: '<div class="text-center"><p id="btntomsg">长按识别下方二维码添加微信</p><img class="qrcode" style="width: 70%!important" src="//jsd.cdn.gitkf.com/gh/arsnyeon/flowloss-cdn-jsd/img/haoka_kf.png" alt=""></div>',
 			yes: function(index, layero) {
 				// 点击联系客服按钮后执行的回调函数
 				var textToCopy = 'sreenews'; // 复制客服微信号
