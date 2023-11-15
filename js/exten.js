@@ -50,7 +50,7 @@
 
 	
 	// === 弹窗模块 ===
-    layui.use('layer', function(){
+    /*layui.use('layer', function(){
         const $ = layui.jquery, layer = layui.layer; 
 		
 		// 获取上次关闭提示框的时间
@@ -105,9 +105,9 @@
 			document.body.style.overflow = 'auto';
 			/*setTimeout(function() {
 				showAlert();
-			}, 60 * 60 * 1000);*/
+			}, 60 * 60 * 1000);
 		});
-    });
+    });*/
 	
 	
 	// === 暗黑模块 ===
