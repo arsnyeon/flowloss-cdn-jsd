@@ -76,7 +76,7 @@
 		
 		// 弹出提示框
 		function showAlert() {
-		    /*layer.open({
+		    layer.open({
 				type: 1,
 				anim: 4,
 				title: 'FlowLoss - 重要通知',
@@ -89,8 +89,7 @@
 					var btn = layero.find('.layui-layer-btn');
 				}
 			});
-			document.body.style.overflow = 'hidden';*/
-			layer.msg('本工具将不再内置大厂链接，建议使用自定义节点功能', {time: 5000,anim: 6});
+			document.body.style.overflow = 'hidden';
 		}
 		
 		// 更新上次关闭提示框的时间
@@ -103,8 +102,8 @@
 		// 关闭提示框后更新上次关闭时间，并设置定时器1小时后再次弹出提示框
 		$(document).on('click','.layui-layer-btn0',function(){
 			updateLastCloseTime_alert();
-			/*document.body.style.overflow = 'auto';
-			setTimeout(function() {
+			document.body.style.overflow = 'auto';
+			/*setTimeout(function() {
 				showAlert();
 			}, 60 * 60 * 1000);*/
 		});
