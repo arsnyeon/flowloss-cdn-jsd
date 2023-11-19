@@ -278,6 +278,8 @@
 		});
 	}
 
+	// === 首页广告模块 ===
+		
 	// 获取所有的 img-wrapper 元素
 	const imgWrappers = document.querySelectorAll('.img-wrapper');
 
@@ -298,7 +300,7 @@
 		  // 判断时间是否过期
 		  if (currentDate > expirationDate) {
 			// 更改链接地址
-			firstAnchor.href = "/cooperate";
+			firstAnchor.href = "/co";
 
 			// 更改 img 的图片地址
 			const imgElement = firstAnchor.querySelector('img');
@@ -327,16 +329,32 @@
 			var diff = now - parseInt(flowloss_data.set.adstime);
 			var hourDiff = diff / (1000 * 60 * 60);
 				
-		// 如果时间差小于等于3小时，则关闭广告位
-			if (hourDiff <= 3) {
-				box.style.display = "none";
+		// 如果时间差大于等于3小时，则显示广告位
+			if (hourDiff >= 3) {
+				box.style.display = "inline";
+				getadinfo();
 			}
 		} else {
 		// 如果上次关闭时间为空，则显示广告位
-		
+			box.style.display = "inline";
+			getadinfo();
 		}
 	} catch (error) {
 	  // 错误处理逻辑
+	}
+	
+	// 获取云端广告信息
+	function getadinfo() {
+		fetch('https://api.net.arsn.cn/ajax.php?act=ad')
+		.then(response => response.json())
+		.then(result => {
+			var box = document.getElementById("spread");
+			box.querySelector('a').href = result.data.url;
+			box.querySelector('img').src = result.data.img;
+		})
+		.catch(function(error) {
+			console.log(error); // 报告错误信息
+		});
 	}
 	
 	// 更新上次关闭广告位的时间

@@ -560,6 +560,9 @@ img.loginbtn{width: 66px;margin: 16px;}
   }
 }
 
+#adts_id{
+	display: none;
+}
 
 #content {
   position: relative;
