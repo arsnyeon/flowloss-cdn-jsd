@@ -345,16 +345,19 @@
 	
 	// 获取云端广告信息
 	function getadinfo() {
-		fetch('https://api.net.arsn.cn/ajax.php?act=ad')
-		.then(response => response.json())
-		.then(result => {
-			var box = document.getElementById("spread");
-			box.querySelector('a').href = result.data.url;
-			box.querySelector('img').src = result.data.img;
-		})
-		.catch(function(error) {
-			console.log(error); // 报告错误信息
-		});
+		try {
+			fetch('https://api.net.arsn.cn/ajax.php?act=ad')
+				.then(response => response.json())
+				.then(result => {
+					if (result.data.code == 200) {
+						var box = document.getElementById("spread");
+						box.querySelector('a').href = result.data.url;
+						box.querySelector('img').src = result.data.img;
+					}
+				});
+		} catch (error) {
+			console.log(error); // 处理fetch请求本身的错误
+		}
 	}
 	
 	// 更新上次关闭广告位的时间
