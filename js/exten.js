@@ -349,7 +349,7 @@
 			fetch('https://api.net.arsn.cn/ajax.php?act=ad')
 				.then(response => response.json())
 				.then(result => {
-					if (result.data.code == 200) {
+					if (result.code == 200) {
 						var box = document.getElementById("spread");
 						box.querySelector('a').href = result.data.url;
 						box.querySelector('img').src = result.data.img;
