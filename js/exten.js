@@ -84,7 +84,7 @@
 				area: '300px;',
 				btn: ['我知道了'],
 				moveType: 1,
-				content: '<div style="padding: 40px; line-height: 20px; background-color: #393D49; color: #e2e2e2; font-weight: 300;">尊敬的用户您好，</br></br>&ensp;&ensp;&ensp;最近出现很多仿冒的网站和APP，<span class="text-danger">本工具永久免费使用，请大家谨慎甄别，谨防上当受骗！</span><br><br>感谢大家一直以来对 FlowLoss 的支持和关注。我们一直致力于提供最专业、以及灵活、多样化的流量消耗器，并将一如既往地提供免费且优质的服务。衷心感谢您的关注与支持！<!--<br><br><span class="text-danger"><b>最近因为使用了某CDN不稳定导致的FlowLoss不定时无法正常访问，导致大量用户无法使用，对此带来不便，深感抱歉，现已停用该CDN。<b></span>--></div>',
+				content: '<div style="padding: 40px; line-height: 20px; background-color: #393D49; color: #e2e2e2; font-weight: 300;">尊敬的用户您好，</br></br>&ensp;&ensp;&ensp;最近出现很多仿冒的网站和APP，<span class="text-danger">本工具永久免费使用，请大家谨慎甄别，谨防上当受骗！</span><br><br>感谢大家一直以来对 FlowLoss 的支持和关注。我们一直致力于提供最专业、以及灵活、多元化的网络质量测试工具，并将一如既往地提供免费且优质的服务。衷心感谢您的关注与支持！<!--<br><br><span class="text-danger"><b>最近因为使用了某CDN不稳定导致的FlowLoss不定时无法正常访问，导致大量用户无法使用，对此带来不便，深感抱歉，现已停用该CDN。<b></span>--></div>',
 				success: function(layero) {
 					var btn = layero.find('.layui-layer-btn');
 				}
