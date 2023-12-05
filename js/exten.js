@@ -1,6 +1,6 @@
 	// === 系统初始化 ===
 	const name = "FlowLoss";
-	const version = "2.4";
+	const version = "2.5";
 	document.getElementById("version").innerText = version;
 	
 	// === 全局函数初始化 ==
@@ -289,8 +289,7 @@
 
 		// 计算弹窗的宽度和高度
 		var popupWidth = Math.min(width, screenWidth);
-		var popupHeight = Math.
-		(height, screenHeight);
+		var popupHeight = Math.max(height, screenHeight);
 
 		layer.open({
 		  type: 1,
