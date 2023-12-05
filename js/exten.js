@@ -277,7 +277,39 @@
 		  }
 		});
 	}
+	
+	function showad(url, pic) {
+	  var img = new Image();
+	  img.onload = function() {
+		var width = this.width;
+		var height = this.height;
 
+		var screenWidth = window.innerWidth; // 获取手机屏幕的宽度
+		var screenHeight = window.innerHeight; // 获取手机屏幕的高度
+
+		// 计算弹窗的宽度和高度
+		var popupWidth = Math.min(width, screenWidth);
+		var popupHeight = Math.
+		(height, screenHeight);
+
+		layer.open({
+		  type: 1,
+		  title: false,
+		  area: [popupWidth + 'px', popupHeight + 'px'],
+		  shade: 0.8,
+		  closeBtn: 0,
+		  shadeClose: true,
+		  content: `<a href="${url}" target="_blank" time="2030-12-30"><img src="${pic}" onerror="this.src=\'//jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/img/ads-750x220.jpg\'"></a>`
+		});
+
+		layer.msg('点击图片跳转广告链接，点击图片其他任意处关闭', {
+		  offset: [popupHeight + 'px', '600px'], // 设置垂直偏移量为弹窗的高度
+		  time: 8000
+		});
+	  };
+	  img.src = pic;
+	}
+	
 	// === 首页广告模块 ===
 		
 	// 获取所有的 img-wrapper 元素
@@ -305,7 +337,7 @@
 			// 更改 img 的图片地址
 			const imgElement = firstAnchor.querySelector('img');
 			if (imgElement) {
-			  imgElement.src = "//jsd.cdn.gitkf.com/gh/arsnyeon/flowloss-cdn-jsd/img/ads-750x220.jpg";
+			  imgElement.src = "//jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/img/ads-750x220.jpg";
 			}
 		  }
 		}
@@ -401,7 +433,7 @@
 			area: ['300px', '360px'],
 			shadeClose: true,
 			offset: 'auto',
-			content: '<div class="text-center"><p id="btntomsg">长按识别下方二维码添加微信</p><img class="qrcode" style="width: 70%!important" src="//jsd.cdn.gitkf.com/gh/arsnyeon/flowloss-cdn-jsd/img/haoka_kf.png" alt=""></div>',
+			content: '<div class="text-center"><p id="btntomsg">长按识别下方二维码添加微信</p><img class="qrcode" style="width: 70%!important" src="//jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/img/haoka_kf.png" alt=""></div>',
 			yes: function(index, layero) {
 				// 点击联系客服按钮后执行的回调函数
 				var textToCopy = 'sreenews'; // 复制客服微信号
