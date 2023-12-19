@@ -406,7 +406,7 @@
 			srclink.src = "//haokawx.lot-ml.com/Product/Index/93815";
 		} else if (id == 2)  {
 			layer.open({
-				content: '是否进入新店铺？',
+				content: '是否进入美化版店铺？',
 				btn: ['是', '否'],
 				closeBtn: 0,
 				move: false, // 禁止移动弹窗
