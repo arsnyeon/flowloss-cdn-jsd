@@ -2,6 +2,21 @@ body,.btn,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family:Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,微软雅黑,Arial,sans-serif;
 }
 
+@font-face {
+	font-family: 'FlowLoss Title';
+	src: url('https://jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/fonts/EDIX.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'FlowLoss Time';
+	src: url('https://jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/fonts/DingTalk.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'FlowLoss Network';
+	src: url('https://jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/fonts/DouYin.otf') format('opentype');
+}
+
 .nk-header {
 	border-bottom:0px solid #e5e9f2;
 	box-shadow:0 0 #0000,0 0 #0000,0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
@@ -107,8 +122,9 @@ body,.btn,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .logo-link {
 	font-weight:700;
-	font-size:21px;
+	font-size:15px;
 	position:inherit;
+	font-family: 'FlowLoss Title', sans-serif;
 }
 .logo-link img {
 	height: 35px;
@@ -625,22 +641,6 @@ img.loginbtn{width: 66px;margin: 16px;}
     overflow: hidden !important;
     border-radius: 8px !important;
   }
-}
-
-
-@font-face {
-	font-family: 'FlowLoss Title';
-	src: url('https://jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/fonts/EDIX.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'FlowLoss Time';
-	src: url('https://jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/fonts/DingTalk.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'FlowLoss Network';
-	src: url('https://jsd.cdn.zzko.cn/gh/arsnyeon/flowloss-cdn-jsd/fonts/DouYin.otf') format('opentype');
 }
 
 .screen-bg {
