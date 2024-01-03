@@ -709,6 +709,16 @@ img.loginbtn{width: 66px;margin: 16px;}
     transition: all 2s ease;
 }
 
+.slick-slider {
+	width: 80%;
+	margin: auto;
+}
+.slick-slide img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 768px) {
 	.adts .img-wrapper {
 		flex: 50%;

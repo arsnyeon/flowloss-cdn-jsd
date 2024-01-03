@@ -26,17 +26,17 @@
 	// === 客户端更新模块 ===
 	try {
 		var AlertSW = "0";
-		const app_latest_version = "1.6.2";
+		const app_latest_version = "1.6.4";
 		const client_latest_version = "1.1.0";
 		
 		if (compareVersions(app_local_version, app_latest_version) < 0) {
-			popup.msg('<h5>检测到新版本</h5><br>请到官网 net.arsn.cn/app 下载新版本后使用！', 0);
+			popup.msg('<h5>检测到新版本</h5><br>请到官网 net.arsn.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
 			document.body.style.overflow = 'hidden';
 			AlertSW = "1";
 		}
 		
 		if (compareVersions(client_local_version, client_latest_version) < 0) {
-			popup.msg('<h5>检测到新版本</h5><br>请到官网 net.arsn.cn/app 下载新版本后使用！', 0);
+			popup.msg('<h5>检测到新版本</h5><br>请到官网 net.arsn.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
 			document.body.style.overflow = 'hidden';
 			AlertSW = "1";
 		}
@@ -220,7 +220,7 @@
 		if (elementToHide) {
 			elementToHide.style.display = 'none';
 		}
-		var elementToHide = document.querySelector('#main_logo'); // 替换为需要隐藏的元素 ID
+		var elementToHide = document.querySelector('#brand_figure'); // 替换为需要隐藏的元素 ID
 		if (elementToHide) {
 			elementToHide.style.display = 'none';
 		}
@@ -310,6 +310,15 @@
 	}
 	
 	// === 首页广告模块 ===
+	
+	$(document).ready(function(){
+		$('.slick-slider').slick({
+			autoplay: true,
+			autoplaySpeed: 3000, // 6秒切换一次
+			arrows: false, // 是否显示箭头
+			dots: false, // 是否显示小圆点
+		});
+	});
 		
 	// 获取所有的 img-wrapper 元素
 	const imgWrappers = document.querySelectorAll('.img-wrapper');
