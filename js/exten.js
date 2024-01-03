@@ -377,7 +377,7 @@
 	// 获取云端广告信息
 	function getadinfo() {
 		try {
-			fetch('https://api.net.arsn.cn/ajax.php?act=ad')
+			fetch('https://info.u3o.cn/ajax.php?act=ad')
 				.then(response => response.json())
 				.then(result => {
 					if (result.code == 200) {
