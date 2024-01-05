@@ -310,15 +310,18 @@
 	}
 	
 	// === 首页广告模块 ===
-	
-	$(document).ready(function(){
-		$('.slick-slider').slick({
-			autoplay: true,
-			autoplaySpeed: 3000, // 6秒切换一次
-			arrows: false, // 是否显示箭头
-			dots: false, // 是否显示小圆点
+	try {
+		$(document).ready(function(){
+			$('.slick-slider').slick({
+				autoplay: true,
+				autoplaySpeed: 3000, // 6秒切换一次
+				arrows: false, // 是否显示箭头
+				dots: false, // 是否显示小圆点
+			});
 		});
-	});
+	} catch (error) {
+	  // 错误处理逻辑
+	}
 		
 	// 获取所有的 img-wrapper 元素
 	const imgWrappers = document.querySelectorAll('.img-wrapper');
