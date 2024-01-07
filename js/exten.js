@@ -30,13 +30,13 @@
 		const client_latest_version = "1.1.0";
 		
 		if (compareVersions(app_local_version, app_latest_version) < 0) {
-			popup.msg('<h5>检测到新版本</h5><br>请到官网 net.arsn.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
+			popup.msg('<h5>检测到新版本</h5>请访问官网 net.u3o.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
 			document.body.style.overflow = 'hidden';
 			AlertSW = "1";
 		}
 		
 		if (compareVersions(client_local_version, client_latest_version) < 0) {
-			popup.msg('<h5>检测到新版本</h5><br>请到官网 net.arsn.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
+			popup.msg('<h5>检测到新版本</h5>请访问官网 net.u3o.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
 			document.body.style.overflow = 'hidden';
 			AlertSW = "1";
 		}
