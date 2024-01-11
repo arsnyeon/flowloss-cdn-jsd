@@ -589,8 +589,10 @@
       $body.toggleClass('dark-mode');
       if($(this).hasClass('active')) {
 		getdarkmode(true);
+		document.querySelector(".copyrightbg").style.display = "none";
       }else{
 		getdarkmode(false);
+		document.querySelector(".copyrightbg").style.display = "block"
       }
     });
   }; // Knob @v1.0
@@ -916,13 +918,6 @@
 }(NioApp, jQuery);
 
 function getdarkmode(mode) {
-	let json_data = localStorage.getItem('flowloss_data');
-	if (json_data === null || json_data === undefined) {
-	  let flowloss_data = json_data ? JSON.parse(json_data) : {"set":{},"user":{}};
-	  localStorage.setItem('flowloss_data', JSON.stringify(flowloss_data));
-	} else {
-	   let flowloss_data = json_data ? JSON.parse(json_data) : {"set":{},"user":{}};
-	}
 	var now = new Date().getTime();
 	flowloss_data.set.darkmode = mode;
 	flowloss_data.set.darktime = now.toString();
