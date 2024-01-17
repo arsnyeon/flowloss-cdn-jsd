@@ -605,8 +605,11 @@
 	
 	// === 开发者版权声明 ==
 	function createWaterMark() {
-		const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="380" height="200"><text y="180" x="0" stroke="#ffffff" stroke-opacity="0.1" fill="#bbbbbb" fill-opacity="0.1" transform="rotate(-10)" font-size="20">FlowLoss net.arsn.cn</text></svg>`;
+		const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="380" height="200"><text y="180" x="0" stroke="#ffffff" stroke-opacity="0.1" fill="#bbbbbb" fill-opacity="0.1" transform="rotate(-10)" font-size="20">FlowLoss net.u3o.cn</text></svg>`;
 		return `data:image/svg+xml;base64,${window.btoa(unescape(encodeURIComponent(svgStr)))}`;
+	}
+	if(flowloss_data.set.darkmode) {
+		document.querySelector(".copyrightbg").style.display = "none";
 	}
 	const watermakr = document.createElement("div");
 	watermakr.className = "copyrightbg";
@@ -629,7 +632,6 @@
 	const targetNode = document.body;
 	const observer = new MutationObserver(callback);
 	observer.observe(targetNode, config);
-	
 	// === 开发者信息模块 ===
 	
 	
@@ -637,5 +639,5 @@
 	console.clear();
 	
 	// 版权声明
-	console.log(`%c \u0046\u006c\u006f\u0077\u004c\u006f\u0073\u0073 ${version} https://net.arsn.cn/`, "color:#fff; background: linear-gradient(55deg, #212121 0%, #212121 40%, #323232 calc(40% + 1px), #323232 60%, #008F95 calc(60% + 1px), #008F95 70%, #14FFEC calc(70% + 1px), #14FFEC 100%);padding:5px; border-radius: 5px;");
+	console.log(`%c \u0046\u006c\u006f\u0077\u004c\u006f\u0073\u0073 ${version} https://net.u3o.cn/`, "color:#fff; background: linear-gradient(55deg, #212121 0%, #212121 40%, #323232 calc(40% + 1px), #323232 60%, #008F95 calc(60% + 1px), #008F95 70%, #14FFEC calc(70% + 1px), #14FFEC 100%);padding:5px; border-radius: 5px;");
 	console.error('版权所有，盗我代码还不留原始版权的人是小狗！→_→');
