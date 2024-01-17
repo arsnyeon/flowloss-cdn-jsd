@@ -608,9 +608,6 @@
 		const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="380" height="200"><text y="180" x="0" stroke="#ffffff" stroke-opacity="0.1" fill="#bbbbbb" fill-opacity="0.1" transform="rotate(-10)" font-size="20">FlowLoss net.u3o.cn</text></svg>`;
 		return `data:image/svg+xml;base64,${window.btoa(unescape(encodeURIComponent(svgStr)))}`;
 	}
-	if(flowloss_data.set.darkmode) {
-		document.querySelector(".copyrightbg").style.display = "none";
-	}
 	const watermakr = document.createElement("div");
 	watermakr.className = "copyrightbg";
 	watermakr.style.backgroundImage = `url(${createWaterMark()})`;
@@ -632,8 +629,12 @@
 	const targetNode = document.body;
 	const observer = new MutationObserver(callback);
 	observer.observe(targetNode, config);
-	// === 开发者信息模块 ===
 	
+	if(flowloss_data.set.darkmode) {
+		document.querySelector(".copyrightbg").style.display = "none";
+	}
+	
+	// === 开发者信息模块 ===
 	
 	// 烦人的 浏览器插件，输出一大堆错误信息、、清除掉！	
 	console.clear();
