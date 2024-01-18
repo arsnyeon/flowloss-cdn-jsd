@@ -656,7 +656,7 @@ img.loginbtn{width: 66px;margin: 16px;}
     text-align: center;
 }
 .screen-title {
-    margin-top: 3vh;
+    margin-top: 0vh;
     font-size: 22px;
 	font-family: 'FlowLoss Title', sans-serif;
 }
@@ -675,8 +675,8 @@ img.loginbtn{width: 66px;margin: 16px;}
 
     }
     .screen-right {
-        margin-top: -3vh;
-        height: 200px;
+        margin-top: 0vh;
+        height: 255px;
     }
 }
 
