@@ -671,12 +671,12 @@ img.loginbtn{width: 66px;margin: 16px;}
         column-count: 2;
     }
     .screen-left {
-        height: 255px;
+        height: 190px;
 
     }
     .screen-right {
         margin-top: 0vh;
-        height: 255px;
+        height: 190px;
     }
 }
 
