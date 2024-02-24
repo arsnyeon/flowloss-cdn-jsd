@@ -1,6 +1,6 @@
 	// === 系统初始化 ===
 	const name = "FlowLoss";
-	const version = "2.7";
+	const version = "2.8";
 	document.getElementById("version").innerText = version;
 	
 	// === 全局函数初始化 ==
