@@ -24,24 +24,43 @@
 	}
 	
 	// === 客户端更新模块 ===
-	try {
-		var AlertSW = "0";
-		const app_latest_version = "1.6.4";
-		const client_latest_version = "1.1.0";
-		
-		if (compareVersions(app_local_version, app_latest_version) < 0) {
-			popup.msg('<h5>检测到新版本</h5>请访问官网 net.u3o.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
-			document.body.style.overflow = 'hidden';
-			AlertSW = "1";
+	function DetectUpdates() {
+		try {
+			const app_latest_version = "1.6.4";
+			const client_latest_version = "1.1.0";
+			
+			if (compareVersions(app_local_version, app_latest_version) < 0) {
+				layer.open({
+					type: 1,
+					title: '检测更新',
+					offset: 'b',
+					anim: 'slideUp',
+					area: ['100%', '160px'],
+					shadeClose: false,
+					scrollbar: false,
+					content: '<div style="padding: 16px;">检测到新版本，请访问官网 net.u3o.cn/app 下载新版本后使用，官方交流群：139646813</div>'
+				});
+				return false;
+			}
+			
+			if (compareVersions(client_local_version, client_latest_version) < 0) {
+				layer.open({
+					type: 1,
+					title: '检测更新',
+					offset: 'b',
+					anim: 'slideUp',
+					area: ['100%', '160px'],
+					shadeClose: false,
+					scrollbar: false,
+					content: '<div style="padding: 16px;">检测到新版本，请访问官网 net.u3o.cn/app 下载新版本后使用，官方交流群：139646813</div>'
+				});
+				return false;
+			}
+			return true;
+		} catch (error) {
+		  // 错误处理逻辑
+		  return true;
 		}
-		
-		if (compareVersions(client_local_version, client_latest_version) < 0) {
-			popup.msg('<h5>检测到新版本</h5>请访问官网 net.u3o.cn/app 下载新版本后使用！<br>官方交流群：139646813', 0);
-			document.body.style.overflow = 'hidden';
-			AlertSW = "1";
-		}
-	} catch (error) {
-	  // 错误处理逻辑
 	}
 	
 	function compareVersions(a, b) {
@@ -62,16 +81,14 @@
 			var diff = now - parseInt(flowloss_data.set.alert);
 			var hourDiff = diff / (1000 * 60 * 60);
 				
-			// 如果时间差大于等于1小时，则弹出提示框并更新上次关闭时间为当前时间
-			if (hourDiff >= 1) {
-				if(AlertSW == "0"){
-					showAlert();
-					updateLastCloseTime_alert();
-				}
+			// 如果时间差大于等于6小时，则弹出提示框并更新上次关闭时间为当前时间
+			if (hourDiff >= 6 && DetectUpdates()) {
+				showAlert();
+				updateLastCloseTime_alert();
 			}
 		} else {
 			// 如果上次关闭时间为空，则直接弹出提示框
-			if(AlertSW == "0")showAlert()
+			if(DetectUpdates()) showAlert();
 		}
 		
 		// 弹出提示框
@@ -84,12 +101,12 @@
 				area: '300px;',
 				btn: ['我知道了'],
 				moveType: 1,
+				scrollbar: false,
 				content: '<div style="padding: 40px; line-height: 20px; background-color: #393D49; color: #e2e2e2; font-weight: 300;">尊敬的用户您好，</br></br>&ensp;&ensp;&ensp;最近出现很多仿冒的网站和APP，<span class="text-danger">本工具永久免费使用，请大家谨慎甄别，谨防上当受骗！</span><br><br>感谢大家一直以来对 FlowLoss 的支持和关注。我们一直致力于提供最专业、以及灵活、多元化的网络质量测试工具，并将一如既往地提供免费且优质的服务。衷心感谢您的关注与支持！<!--<br><br><span class="text-danger"><b>最近因为使用了某CDN不稳定导致的FlowLoss不定时无法正常访问，导致大量用户无法使用，对此带来不便，深感抱歉，现已停用该CDN。<b></span>--></div>',
 				success: function(layero) {
 					var btn = layero.find('.layui-layer-btn');
 				}
 			});
-			document.body.style.overflow = 'hidden';
 		}
 		
 		// 更新上次关闭提示框的时间
@@ -102,7 +119,6 @@
 		// 关闭提示框后更新上次关闭时间，并设置定时器1小时后再次弹出提示框
 		$(document).on('click','.layui-layer-btn0',function(){
 			updateLastCloseTime_alert();
-			document.body.style.overflow = 'auto';
 			/*setTimeout(function() {
 				showAlert();
 			}, 60 * 60 * 1000);*/
@@ -259,22 +275,12 @@
 
 	function help(){
 		layer.open({
-		  type: 2,
-		  area: ['100%', '100%'],
-		  title: 'FlowLoss',
-		  fixed: true, //固定
-		  maxmin: false, // 禁止放大
-		  min: false, // 禁止最小化
-		  scrollbar: false,
-		  content: '/docs/faq-general.html',
-		  success: function() {
-			// 弹窗打开时禁用背景页面的滚动
-			document.body.style.overflow = 'hidden';
-		  },
-		  end: function() {
-			// 弹窗关闭时恢复背景页面的滚动
-			document.body.style.overflow = 'auto';
-		  }
+			type: 2,
+			title: false,
+			scrollbar: false,
+			shadeClose: true,
+			area: ['90%', '90%'],
+			content: ['/docs/faq-general.html', 'yes']
 		});
 	}
 	
