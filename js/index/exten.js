@@ -4,7 +4,6 @@
 	document.getElementById("version").innerText = version;
 	
 	// === 全局函数初始化 ==
-	var popup = new Popup();
 	
 	// === 全局数据初始化 ==
 	var json_data = localStorage.getItem('flowloss_data');
