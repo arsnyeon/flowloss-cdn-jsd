@@ -455,6 +455,15 @@
 		100%{transform:rotate(359deg);}
 	}
 	
+	div.visible{
+		animation: fadeIn 0.4s;
+		display:block;
+	}
+	div.hidden{
+		animation: fadeOut 0.4s;
+		display:none;
+	}
+	
 	.layui-flowloss-btn {
 		display: inline-block;
 		vertical-align: middle;
