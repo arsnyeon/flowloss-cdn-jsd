@@ -50,6 +50,7 @@
 	#test{
 		margin-top:2em;
 		margin-bottom:2em;
+		font-size: 0.9em;
 	}
 	
 	#switch {
@@ -161,11 +162,14 @@
 		.speedtest{
 			font-size:1.5vw;
 		}
+		#test {
+			font-size: 1em;
+		}
 	}
 	
 	@media all and (max-width:40em){
-		.speedtest{
-			font-size:0.9em;
+		.speedtest, #test {
+			font-size: 0.9em;
 		}
 		.speedtest div.testGroup{
 			display:block;
